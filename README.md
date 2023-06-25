@@ -17,9 +17,27 @@ Some questions we can ask to help us explore the data:
 * What is the most popular month/day/hour for not showing up?
 * What is the age distribution of patients?
 * Does the neighborhood play a role in making patients don't show up? "Location of the hospital"
-* Which pateints show up more? Does old age take care of their health more than youth?
+* Which patients show up more? Does old age take better care of their health more than youth?
 * Does the disease type affect the patient's show up?
+## Dataset Description: 
+The data set is a Medical Appointment No Shows dataset that contains information about the patients’ appointments.
 
+Each patient’s record is characterized by the following features:
+
+PatientID — a unique identifier of a patient
+AppointmentID — a unique identifier of an appointment
+Gender
+ScheduledDay — a day when an appointment is planned to occur.
+AppointmentDay — a real date of an appointment
+Age — a patient’s age.
+Neighborhood — a neighborhood of each patient
+Scholarship — Does the patient receive a scholarship?
+Hypertension — Does the patient have hypertension?
+Diabetes
+Alcoholism
+Handicap
+SMS_received — Has the patient received an SMS reminder?
+No_show — Has the patient decided not to show up?
 
 
 
