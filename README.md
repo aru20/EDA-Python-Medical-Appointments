@@ -23,6 +23,7 @@ Some questions we can ask to help us explore the data:
 The data set is a Medical Appointment No Shows dataset that contains information about the patients’ appointments.
 
 Each patient’s record is characterized by the following features:
+### Data Dictionary
 
 * PatientID — a unique identifier of a patient
 * AppointmentID — a unique identifier of an appointment
@@ -40,4 +41,16 @@ Each patient’s record is characterized by the following features:
 * No_show — Has the patient decided not to show up?
 
 
+### Data Information
+This section will provide basic information about the data.
 
+<img width="749" alt="image" src="https://github.com/aru20/EDA-Python-Medical-Appointments/assets/73730336/83191e49-6ca0-4345-999a-c73bb9ebbb47">
+
+
+In the table above, the first number, the count, shows how many rows have non-missing values. In this instance, we have no missing values.
+
+The second value is the mean, which is the average. Patients in the data frame are, on average, 37 years old. Under that, std is the standard deviation, which measures how numerically spread out the values are, in other word, it tells how close to the mean the data points are.
+
+The column Age has a minimum age of -1 which is erronous data, likewise,the maximum age is 115 years old which seems very high as Brazil's life expectancy for 2020 is 77 years old (please see here). We will deal with these errors in next section.
+
+The column Handcap should be binary (True or False) but it has a max value of 4. This will need to be investigated,
