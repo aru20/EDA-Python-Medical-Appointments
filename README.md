@@ -53,4 +53,16 @@ The second value is the mean, which is the average. Patients in the data frame a
 
 The column Age has a minimum age of -1 which is erronous data, likewise,the maximum age is 115 years old which seems very high as Brazil's life expectancy for 2020 is 77 years old (please see here). We will deal with these errors in next section.
 
-The column Handcap should be binary (True or False) but it has a max value of 4. This will need to be investigated,
+The column Handcap should be binary (True or False) but it has a max value of 4. This will need to be investigated,# 4. Data Cleaning and Processing
+
+# 4. Data Cleaning and Processing
+In this section, we will identify missing values, and duplicate values. We will also check for inconsistent value. We will also check misspelled and outlier data.
+
+ScheduledDay and AppointmentDay are currently objects, it will be converted to DateTime
+AppointmentDay's time will be dropped (as it is set as 00:00:00)
+Misspelled columns are going to be renamed.
+* This data set has no missing values.
+* This data set does not have duplicate appointments but has 48,228 patients that can be considered as returning patients.
+* Convert columns to their correct data types (e.g., converting dates to datetime objects) for better analysis and modeling.
+* Renamed misspelled columns :Hipertension': 'Hypertension', 'Handcap': 'Handicap', 'SMS_received': 'SMSReceived'
+Erroneous data from the Age column will be deleted
