@@ -6,21 +6,21 @@ EDA-Python-Medical Appointments No-show data
 * Exploratory Data Analysis
 * Conclusions
 ## Introduction
-This dataset collects information from 100k medical appointments in Brazil and is focused on the question of whether or not patients show up for their appointment. 
-Our goal in this analysis is to answer why 30% of patients miss their scheduled appointments. who receive treatment instructions do not show up at the next appointment time. In other words, what are the contributing factors for missing appointments?
+This dataset collects information from 100k medical appointments in Brazil and is focused on whether patients show up for their appointment. 
+This analysis aims to answer why 30% of patients miss their scheduled appointments. who receive treatment instructions do not show up at the next appointment time. In other words, what are the contributing factors for missing appointments?
 <!---We are trying to predict the most important factors that affect the patient's attendance.-->
 
-Some questions we can ask to help us explore the data:
+Some questions we can ask to help us explore the data are:
 
 * What is the ratio of people who miss appointments to those who don’t?
-* Does the patient gender has a realation with the atendance?
+* Does the patient's gender has a relation with the attendance?
 * What is the most popular month/day/hour for not showing up?
 * What is the age distribution of patients?
 * Does the neighborhood play a role in making patients don't show up? "Location of the hospital"
-* Which patients show up more? Does old age take better care of their health more than youth?
-* Does the disease type affect the patient's show up?
+* Which patients show up more? Does old age take better care of their health than youth?
+* Does the disease type affect the patient's show-up?
 ## Dataset Description: 
-The data set is a Medical Appointment No Shows dataset that contains information about the patients’ appointments.
+The data set is a Medical Appointment No Shows dataset that contains information about the patient’s appointments.
 
 Each patient’s record is characterized by the following features:
 ### Data Dictionary
@@ -49,9 +49,9 @@ This section will provide basic information about the data.
 
 In the table above, the first number, the count, shows how many rows have non-missing values. In this instance, we have no missing values.
 
-The second value is the mean, which is the average. Patients in the data frame are, on average, 37 years old. Under that, std is the standard deviation, which measures how numerically spread out the values are, in other word, it tells how close to the mean the data points are.
+The second value is the mean, which is the average. Patients in the data frame are, on average, 37 years old. Under that, std is the standard deviation, which measures how numerically spread out the values are, in another word, it tells how close to the mean the data points are.
 
-The column Age has a minimum age of -1 which is erronous data, likewise,the maximum age is 115 years old which seems very high as Brazil's life expectancy for 2020 is 77 years old (please see here). We will deal with these errors in next section.
+The column Age has a minimum age of -1 which is erroneous data, likewise, the maximum age is 115 years old which seems very high as Brazil's life expectancy for 2020 is 77 years old (please see here). We will deal with these errors in the next section.
 
 The column Handcap should be binary (True or False) but it has a max value of 4. This will need to be investigated,# 4. Data Cleaning and Processing
 
@@ -63,12 +63,12 @@ AppointmentDay's time will be dropped (as it is set as 00:00:00)
 Misspelled columns are going to be renamed.
 * This data set has no missing values.
 * This data set does not have duplicate appointments but has 48,228 patients that can be considered returning patients.
-* Convert columns to their correct data types (e.g., converting dates to datetime objects) for better analysis and modeling.
+* For better analysis and modeling, Convert columns to their correct data types (e.g., converting dates to datetime objects).
 * Renamed misspelled columns: Hipertension -> Hypertension ,Handcap ->Handicap, SMS_received-> SMSReceived
 * ![image](https://github.com/aru20/EDA-Python-Medical-Appointments/assets/73730336/1a4bae39-35b3-40e4-9a94-ef21e45cb2a2)
-  Most the patients are between 18 and 55 years old. It is clearly shown that the value 115 and -1 in age columns are outlier.So we will eliminate the patients records who are aged      115 years and -1years.
+  Most of the patients are between 18 and 55 years old. It is clearly shown that the values 115 and -1 in columns are outliers. So we will eliminate the patient's records who are aged      115 years and -1years.
 ## 4.6 Feature engineering
-We can add a new feature to the dataset — ‘Waiting Time Days’ to check how long the patient needs to wait for the appointment day.Another new feature may be ‘WeekDay’ — a weekday of an appointment. With this feature, we can analyze on which days people don’t show up more often.Similarly, add ‘Month’, ‘Hour’ features.
+We can add a new feature to the dataset — ‘Waiting Time Days’ to check how long the patient needs to wait for the appointment day. Another new feature may be ‘WeekDay’ — a weekday of an appointment. With this feature, we can analyze on which days people don’t show up more often. Similarly, add ‘Month’, and ‘Hour’ features.
 ## 5. Exploratory Data Analysis¶
 ###   5.1 Overview of No-Show
 ![image](https://github.com/aru20/EDA-Python-Medical-Appointments/assets/73730336/4f62e70d-f1ac-403e-b528-3e0f1cc61448)
@@ -85,7 +85,7 @@ Less than 10    17475
 56-65           14203
 More than 65    13294
 ![image](https://github.com/aru20/EDA-Python-Medical-Appointments/assets/73730336/e53be289-7ae8-41eb-ba30-7e05290d8b46)
-The patients that seems most likely to not show-up for their appointments are between 10 and 35 years old.
+The patients that seem most likely to not show up for their appointments are between 10 and 35 years old.
 ### 5.3 Gender
 ![image](https://github.com/aru20/EDA-Python-Medical-Appointments/assets/73730336/588dc675-f47c-43e1-97aa-ebd5ba8f0b05)
 
@@ -109,7 +109,7 @@ unknown                  5
 We can clearly identify that people missed their appointment because of the long waiting time between appointment booking and appointment day.
 ### 5.6 Neighborhood
 ![image](https://github.com/aru20/EDA-Python-Medical-Appointments/assets/73730336/a9df7e1a-259d-4041-972e-7918175ed44d)
-Most of the neighborhoods have the same percentage of no shows. So this analysis will not help us derive any significant predictions.
+Most of the neighborhoods have the same percentage of no-shows. So this analysis will not help us derive any significant predictions.
 ### 5.7 SMS Received
 ![image](https://github.com/aru20/EDA-Python-Medical-Appointments/assets/73730336/59f1a3ce-dff2-4fcf-8e91-8cdb1aeecee4)
 The above chart shows that the patients who received SMS notifications missed their appointments more than those patients who did not receive SMS.
