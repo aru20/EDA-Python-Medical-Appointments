@@ -1,10 +1,10 @@
 # Explorarory Data Analysis of Medical Appointments No-Show Data
 
 ## Table of Contents
-* [Introductions](https://github.com/aru20/EDA-Python-Medical-Appointments/edit/main/README.md#introduction)
-* [Data Wrangling](https://github.com/aru20/EDA-Python-Medical-Appointments/edit/main/README.md#introduction)
-* [Exploratory Data Analysis](https://github.com/aru20/EDA-Python-Medical-Appointments/edit/main/README.md#introduction)
-* [Conclusions](https://github.com/aru20/EDA-Python-Medical-Appointments/edit/main/README.md#introduction)
+* [Introductions](https://github.com/aru20/EDA-Python-Medical-Appointments/tree/main#1-introduction)
+* [Data Wrangling](https://github.com/aru20/EDA-Python-Medical-Appointments/tree/main#2-dataset-description)
+* [Exploratory Data Analysis](https://github.com/aru20/EDA-Python-Medical-Appointments/tree/main#5-exploratory-data-analysis)
+* [Conclusions](https://github.com/aru20/EDA-Python-Medical-Appointments/tree/main#conclusions)
 
 ## 1. Introduction
 This dataset collects information from 100k medical appointments in Brazil and is focused on whether patients show up for their appointment. 
