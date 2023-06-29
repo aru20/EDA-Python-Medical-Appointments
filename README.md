@@ -56,13 +56,33 @@ The column Age has a minimum age of -1 which is erronous data, likewise,the maxi
 The column Handcap should be binary (True or False) but it has a max value of 4. This will need to be investigated,# 4. Data Cleaning and Processing
 
 # 4. Data Cleaning and Processing
-In this section, we will identify missing values, and duplicate values. We will also check for inconsistent value. We will also check misspelled and outlier data.
+In this section, we will identify missing values and duplicate values. We will also check for inconsistent values. We will also check for misspelled and outlier data.
 
 ScheduledDay and AppointmentDay are currently objects, it will be converted to DateTime
 AppointmentDay's time will be dropped (as it is set as 00:00:00)
 Misspelled columns are going to be renamed.
 * This data set has no missing values.
-* This data set does not have duplicate appointments but has 48,228 patients that can be considered as returning patients.
+* This data set does not have duplicate appointments but has 48,228 patients that can be considered returning patients.
 * Convert columns to their correct data types (e.g., converting dates to datetime objects) for better analysis and modeling.
-* Renamed misspelled columns :Hipertension': 'Hypertension', 'Handcap': 'Handicap', 'SMS_received': 'SMSReceived'
-Erroneous data from the Age column will be deleted
+* Renamed misspelled columns: Hipertension -> Hypertension ,Handcap ->Handicap, SMS_received-> SMSReceived
+* ![image](https://github.com/aru20/EDA-Python-Medical-Appointments/assets/73730336/1a4bae39-35b3-40e4-9a94-ef21e45cb2a2)
+  Most the patients are between 18 and 55 years old. It is clearly shown that the value 115 and -1 in age columns are outlier.So we will eliminate the patients records who are aged      115 years and -1years.
+## 4.6 Feature engineering
+We can add a new feature to the dataset — ‘Waiting Time Days’ to check how long the patient needs to wait for the appointment day.Another new feature may be ‘WeekDay’ — a weekday of an appointment. With this feature, we can analyze on which days people don’t show up more often.Similarly, add ‘Month’, ‘Hour’ features.
+## 5. Exploratory Data Analysis¶
+###   5.1 Overview of No-Show
+![image](https://github.com/aru20/EDA-Python-Medical-Appointments/assets/73730336/4f62e70d-f1ac-403e-b528-3e0f1cc61448)
+It’s clear that only 20.2% of patients didn’t show up while 79.8% were present on the appointment day.
+### 5.2 Age group
+We created the below age group. 
+AgeGroup
+Less than 10    17475
+10-18           11391
+19-25            9733
+26-35           14404
+36-45           14582
+46-55           15437
+56-65           14203
+More than 65    13294
+![image](https://github.com/aru20/EDA-Python-Medical-Appointments/assets/73730336/e53be289-7ae8-41eb-ba30-7e05290d8b46)
+The patients that seems most likely to not show-up for their appointments are between 10 and 35 years old.
