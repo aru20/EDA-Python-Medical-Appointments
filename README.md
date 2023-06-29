@@ -86,3 +86,42 @@ Less than 10    17475
 More than 65    13294
 ![image](https://github.com/aru20/EDA-Python-Medical-Appointments/assets/73730336/e53be289-7ae8-41eb-ba30-7e05290d8b46)
 The patients that seems most likely to not show-up for their appointments are between 10 and 35 years old.
+### 5.3 Gender
+![image](https://github.com/aru20/EDA-Python-Medical-Appointments/assets/73730336/588dc675-f47c-43e1-97aa-ebd5ba8f0b05)
+
+From the table above, we can clearly see that 'Female' patients usually have more appointments that 'Male' patients, they also have about the double number of missed appointments. However, looking at the percentage of missed appointments by gender shows that it is almost the same rate (about 20%). Therefore, gender does not seem to be an important feature.
+
+### 5.4 Appointment Day
+![image](https://github.com/aru20/EDA-Python-Medical-Appointments/assets/73730336/33ade37b-7949-4685-b143-bb8cce0ad638)
+The percentage of present and absent is roughly the same across the week.
+### 5.5 Waiting Time Between Booking and Medical Appointment
+![image](https://github.com/aru20/EDA-Python-Medical-Appointments/assets/73730336/71828ccf-22ed-4651-94c3-7c3d26a6243a)
+Most of the appointments are taken on the same day or within a month. There are a few appointments that are scheduled six months in advance. We created pre-appointment period groups using the distribution above.
+Same day             38560
+Less than a week     27276
+A week               14018
+Two weeks             9925
+Three weeks           6859
+A month               6229
+More than a month     7647
+unknown                  5
+![image](https://github.com/aru20/EDA-Python-Medical-Appointments/assets/73730336/b890b369-4b8e-4e72-8fd8-0bcff616c2c5)
+We can clearly identify that people missed their appointment because of the long waiting time between appointment booking and appointment day.
+### 5.6 Neighborhood
+![image](https://github.com/aru20/EDA-Python-Medical-Appointments/assets/73730336/a9df7e1a-259d-4041-972e-7918175ed44d)
+Most of the neighborhoods have the same percentage of no shows. So this analysis will not help us derive any significant predictions.
+### 5.7 SMS Received
+![image](https://github.com/aru20/EDA-Python-Medical-Appointments/assets/73730336/59f1a3ce-dff2-4fcf-8e91-8cdb1aeecee4)
+The above chart shows that the patients who received SMS notifications missed their appointments more than those patients who did not receive SMS.
+## Conclusions
+
+* It is observed that only 20.2% of patients didn't show up for their appointments, while 79.8% were present on the appointment day.
+
+* The analysis suggests that the gender of a patient does not have a significant influence on whether the patient shows up or not. In other words, the attendance rate does not vary significantly between genders.
+
+* The age group of patients seems to have an impact on their attendance. Specifically, patients between the ages of 10 and 35 are more likely to not show up for their appointments. It implies that this age group may have factors or circumstances that make them more prone to missing their scheduled appointments.
+
+* The analysis indicates that the time between the patient scheduling their appointment and the actual appointment date affects whether the patient shows up or not. Patients are more likely to show up if there is a shorter time gap between the scheduling and appointment date. Conversely, patients may miss their appointments if there is a long waiting time between booking and the appointment day. This suggests that reducing the waiting time may lead to improved attendance rates.
+
+* The analysis reveals that the percentage of patients who received a text message is slightly more likely to not show up compared to patients who did not receive a text message. However, the difference in attendance rates between the two groups is small.
+
