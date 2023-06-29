@@ -5,6 +5,7 @@
 * [Data Wrangling](https://github.com/aru20/EDA-Python-Medical-Appointments/edit/main/README.md#introduction)
 * [Exploratory Data Analysis](https://github.com/aru20/EDA-Python-Medical-Appointments/edit/main/README.md#introduction)
 * [Conclusions](https://github.com/aru20/EDA-Python-Medical-Appointments/edit/main/README.md#introduction)
+
 ## 1. Introduction
 This dataset collects information from 100k medical appointments in Brazil and is focused on whether patients show up for their appointment. 
 This analysis aims to answer why 30% of patients miss their scheduled appointments. who receive treatment instructions do not show up at the next appointment time. In other words, what are the contributing factors for missing appointments?
